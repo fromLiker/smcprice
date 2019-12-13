@@ -23,7 +23,7 @@ public class CompanyEntity extends AuditEntity {
 	private String companyName;
 
 	@Column(name = "turnover")
-	private BigDecimal turnover;
+	private String turnover;
 
 	@Column(name = "ceo")
 	private String ceo;
@@ -76,11 +76,11 @@ public class CompanyEntity extends AuditEntity {
 		this.companyName = companyName;
 	}
 
-	public BigDecimal getTurnover() {
+	public String getTurnover() {
 		return turnover;
 	}
 
-	public void setTurnover(BigDecimal turnover) {
+	public void setTurnover(String turnover) {
 		this.turnover = turnover;
 	}
 
