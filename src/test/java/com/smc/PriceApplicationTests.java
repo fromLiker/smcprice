@@ -10,17 +10,17 @@ import java.time.format.DateTimeFormatter;
 @SpringBootTest
 class PriceApplicationTests {
 
-	@Autowired
-	private StockPriceService stockPriceService;
+	// @Autowired
+	// private StockPriceService stockPriceService;
 
 
-	@Test
-	public void testSingleCompanyChart() {
-		LocalDateTime start = LocalDateTime.parse((CharSequence) "2019-11-30 16:55:55",
-				DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
-		LocalDateTime end = LocalDateTime.parse((CharSequence) "2019-11-30 16:55:55",
-				DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
-		stockPriceService.comparisonSingleCompany("345902", start, end);
-	}
+	// @Test
+	// public void testSingleCompanyChart() {
+	// 	LocalDateTime start = LocalDateTime.parse((CharSequence) "2019-11-30 16:55:55",
+	// 			DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+	// 	LocalDateTime end = LocalDateTime.parse((CharSequence) "2019-11-30 16:55:55",
+	// 			DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+	// 	stockPriceService.comparisonSingleCompany("345902", start, end);
+	// }
 
 }
