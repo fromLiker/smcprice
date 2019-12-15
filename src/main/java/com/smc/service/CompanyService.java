@@ -53,7 +53,7 @@ public class CompanyService {
 	 */
 	public CommonResult findByCode(String companyCode) {
 		try {
-			CompanyEntity company = companyRepository.findByCode(companyCode);
+			CompanyEntity company = companyRepository.findByCompanyCode(companyCode);
 			return CommonResult.build(ResponseCode.SUCCESS, "SUCCESS!", company);
 		} catch (Exception e) {
 			logger.error("Fail to query company data:", e);

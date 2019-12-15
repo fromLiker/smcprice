@@ -13,9 +13,7 @@ public interface CompanyRepository extends JpaRepository<CompanyEntity, Integer>
 			value = "SELECT companyname from company where companycode = :companyCode")
 	String getCompanyNameByCode(String companyCode);
 
-	@Query(name = "findByCode", nativeQuery = true,
-			value = "SELECT * from company  where companycode = :companyCode")
-	CompanyEntity findByCode(String companyCode);
+	CompanyEntity findByCompanyCode(String companyCode);
 
 	@Query(name = "findByName", nativeQuery = true,
 			value = "SELECT * from company  where companyname = :companyName")

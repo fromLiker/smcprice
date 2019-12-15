@@ -142,7 +142,7 @@ public class SearchController {
 		@RequestBody Map params) throws Exception {
 		LocalDateTime start = LocalDateTime.parse((CharSequence) params.get("start"), DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
 		LocalDateTime end = LocalDateTime.parse((CharSequence) params.get("end"), DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
-		CompanyEntity company = companyRepository.findByCode(companyCode);		
+		CompanyEntity company = companyRepository.findByCompanyCode(companyCode);		
 		List<CompanyEntity> companyEntityList = companyService.findComBySector(company.getSectorName());
 		List<String> stockCodeList = companyEntityList.stream().map(CompanyEntity::getCompanyCode).collect(Collectors.toList());
 		List<StockPriceEntity> stockPriceEntities = new ArrayList<>();
