@@ -1,5 +1,6 @@
 package com.smc;
 
+import org.junit.Ignore;
 // import com.smc.service.StockPriceService;
 // import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
@@ -12,6 +13,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@Ignore
 class PriceApplicationTests {
 
 	// @Autowired
