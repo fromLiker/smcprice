@@ -7,4 +7,5 @@ ENV PROJECT_ARTIFACTID="smcprice" PROJECT_VERSION="0.0.1-SNAPSHOT"
 #当使用本地目录为源目录时，推荐使用 COPY
 COPY target/$PROJECT_ARTIFACTID-$PROJECT_VERSION.jar /smcprice/price.jar
 EXPOSE 8752
-ENTRYPOINT ["java", "-jar", "/smcprice/price.jar"]
+# ENTRYPOINT ["java", "-jar", "/smcprice/price.jar"]
+ENTRYPOINT ["java","-Xms200m","-Xmx300m","-jar","/smcprice/price.jar"]

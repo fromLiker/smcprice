@@ -12,7 +12,9 @@ pipeline {
         }
       }
       steps {
-        sh 'mvn -B -DskipTests clean package'
+        // sh 'mvn -B -DskipTests clean package'
+        sh 'mvn package -Dmaven.test.skip=true'
+        sh 'mvn clean package'
       }
     }
 
@@ -28,10 +30,11 @@ pipeline {
         }
 
         withCredentials([usernamePassword(credentialsId: 'liker163ID', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
-          sh 'docker login -u $USERNAME -p $PASSWORD'
+          // sh 'docker login -u $USERNAME -p $PASSWORD'
           sh 'docker image build -t ${DOCKERHUBNAME}/price .'
-          sh 'docker push ${DOCKERHUBNAME}/price'
-          sh 'docker run -d -p 8752:8752 --network smc-net --name smcprice ${DOCKERHUBNAME}/price'
+          // sh 'docker push ${DOCKERHUBNAME}/price'
+          // sh 'docker run -d -p 8752:8752 --network smc-net --name smcprice ${DOCKERHUBNAME}/price'
+          sh 'docker run -d -p 8752:8752 --memory=400M --name smcprice ${DOCKERHUBNAME}/price'
         }
       }
     }
