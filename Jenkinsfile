@@ -34,7 +34,7 @@ pipeline {
           sh 'docker image build -t ${DOCKERHUBNAME}/price .'
           // sh 'docker push ${DOCKERHUBNAME}/price'
           // sh 'docker run -d -p 8752:8752 --network smc-net --name smcprice ${DOCKERHUBNAME}/price'
-          sh 'docker run -d -p 8752:8752 --memory=400M --name smcprice ${DOCKERHUBNAME}/price'
+          sh 'docker run -d -p 8752:8752 --memory=600M --name smcprice ${DOCKERHUBNAME}/price'
         }
       }
     }
