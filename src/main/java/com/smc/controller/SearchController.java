@@ -59,20 +59,20 @@ public class SearchController {
 		return companyService.findByCompanyid(companyid);
 	}
 	
-	@GetMapping("/exchange")
-	public CommonResult searchExchange() {
-		return exchangeService.findAll();
-	}
+	// @GetMapping("/exchange")
+	// public CommonResult searchExchange() {
+	// 	return exchangeService.findAll();
+	// }
 
 	@GetMapping("/exchange/{stockExchange}")
 	public CommonResult searchExchange(@PathVariable String stockExchange) {
 		return exchangeService.findByExchange(stockExchange);
 	}
 
-	@GetMapping("/exchange/id/{id}")
-	public CommonResult searchExchange(@PathVariable int id) {
-		return exchangeService.findById(id);
-	}
+	// @GetMapping("/exchange/id/{id}")
+	// public CommonResult searchExchange(@PathVariable int id) {
+	// 	return exchangeService.findById(id);
+	// }
 
 	@GetMapping("/ipo")
 	public CommonResult searchIpo() {

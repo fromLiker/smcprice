@@ -33,15 +33,15 @@ public class ExchangeService {
 	 * @auther: Liker
 	 * @date: 2019/12/04 10:39
 	 */
-	public CommonResult findAll() {
-		try {
-			List<StockExchangeEntity> exchange = exchangeRepository.findAll();
-			return CommonResult.build(ResponseCode.SUCCESS, "SUCCESS!", exchange);
-		} catch (Exception e) {
-			logger.error("Fail to query exchange data:", e);
-			return CommonResult.build(ResponseCode.ERROR_ACCESS_DB, "DB ERROR!");
-		}
-	}
+	// public CommonResult findAll() {
+	// 	try {
+	// 		List<StockExchangeEntity> exchange = exchangeRepository.findAll();
+	// 		return CommonResult.build(ResponseCode.SUCCESS, "SUCCESS!", exchange);
+	// 	} catch (Exception e) {
+	// 		logger.error("Fail to query exchange data:", e);
+	// 		return CommonResult.build(ResponseCode.ERROR_ACCESS_DB, "DB ERROR!");
+	// 	}
+	// }
 
 	/**
 	 * Description: query exchange by exchangename.
